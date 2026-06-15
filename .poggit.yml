@@ -3,6 +3,4 @@ branches:
 projects:
   SkillTree:
     path: ""
-    icon: ""
-    libs: []
 ...
