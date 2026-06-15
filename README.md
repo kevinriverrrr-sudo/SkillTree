@@ -81,3 +81,4 @@ Compatible with PocketMine-MP API **5.0.0** and above.
 ## License
 
 This plugin is licensed under the [MIT License](LICENSE).
+
