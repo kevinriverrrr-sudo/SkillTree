@@ -1,0 +1,37 @@
+name: SkillTree
+main: SkillTree\Main
+src-namespace-prefix: SkillTree
+version: 1.0.0
+api: 5.0.0
+load: POSTWORLD
+author: SkillTreeDev
+description: A visual skill tree system with branches, nodes and progression. Players earn skill points by performing actions and spend them to unlock customizable bonuses.
+website: https://github.com/SkillTreeDev/SkillTree
+commands:
+  skilltree:
+    description: Open the skill tree UI
+    usage: "/skilltree [branch]"
+    permission: skilltree.command.skilltree
+  skilltreeadmin:
+    description: Admin commands for SkillTree
+    usage: "/skilltreeadmin <reset|givepoints|takepoints|setpoints> <player> [amount]"
+    permission: skilltree.command.admin
+permissions:
+  skilltree.command.skilltree:
+    description: "Allows the user to open the skill tree UI"
+    default: true
+  skilltree.command.admin:
+    description: "Allows the user to manage skill tree admin commands"
+    default: op
+  skilltree.branch.combat:
+    description: "Allows access to the Combat branch"
+    default: true
+  skilltree.branch.mining:
+    description: "Allows access to the Mining branch"
+    default: true
+  skilltree.branch.farming:
+    description: "Allows access to the Farming branch"
+    default: true
+  skilltree.branch.exploration:
+    description: "Allows access to the Exploration branch"
+    default: true

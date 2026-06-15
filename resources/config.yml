@@ -1,0 +1,169 @@
+# SkillTree Configuration
+# Customize branches, nodes, effects, and point sources
+
+# Language setting (eng, rus, etc.)
+language: "eng"
+
+# Point sources - define how players earn skill points
+point_sources:
+  # Points for killing any mob
+  mob_kill: 1
+  # Bonus points for killing hostile mobs
+  hostile_mob_kill_bonus: 2
+  # Points for killing a player
+  player_kill: 5
+  # Points for mining ores
+  ore_mine:
+    points: 2
+    blocks:
+      - "diamond_ore"
+      - "emerald_ore"
+      - "gold_ore"
+      - "iron_ore"
+      - "lapis_ore"
+      - "redstone_ore"
+      - "deepslate_diamond_ore"
+      - "deepslate_emerald_ore"
+      - "deepslate_gold_ore"
+      - "deepslate_iron_ore"
+      - "deepslate_lapis_ore"
+      - "deepslate_redstone_ore"
+
+# Skill branches and their nodes
+branches:
+  combat:
+    display_name: "Combat"
+    icon: "⚔"
+    nodes:
+      damage_boost_1:
+        description: "+10% melee damage"
+        cost: 5
+        requires: []
+        effects:
+          damage_multiplier: 1.1
+      damage_boost_2:
+        description: "+20% melee damage"
+        cost: 10
+        requires:
+          - "damage_boost_1"
+        effects:
+          damage_multiplier: 1.2
+      critical_strike:
+        description: "15% chance for 2x damage"
+        cost: 15
+        requires:
+          - "damage_boost_2"
+        effects:
+          critical_chance: 0.15
+          critical_multiplier: 2.0
+      life_steal:
+        description: "Heal 10% of damage dealt"
+        cost: 20
+        requires:
+          - "damage_boost_2"
+        effects:
+          life_steal: 0.1
+      critical_master:
+        description: "25% chance for 2.5x damage"
+        cost: 25
+        requires:
+          - "critical_strike"
+        effects:
+          critical_chance: 0.25
+          critical_multiplier: 2.5
+      life_steal_master:
+        description: "Heal 20% of damage dealt"
+        cost: 30
+        requires:
+          - "life_steal"
+        effects:
+          life_steal: 0.2
+
+  mining:
+    display_name: "Mining"
+    icon: "⛏"
+    nodes:
+      ore_sense_1:
+        description: "10% chance for double ore drops"
+        cost: 5
+        requires: []
+        effects:
+          double_drop_chance: 0.1
+      ore_sense_2:
+        description: "25% chance for double ore drops"
+        cost: 12
+        requires:
+          - "ore_sense_1"
+        effects:
+          double_drop_chance: 0.25
+      ore_sense_3:
+        description: "40% chance for double ore drops"
+        cost: 20
+        requires:
+          - "ore_sense_2"
+        effects:
+          double_drop_chance: 0.4
+      mining_fortune:
+        description: "15% chance for triple ore drops"
+        cost: 25
+        requires:
+          - "ore_sense_3"
+        effects:
+          double_drop_chance: 0.15
+
+  farming:
+    display_name: "Farming"
+    icon: "🌾"
+    nodes:
+      nourishment_1:
+        description: "+2 bonus food saturation"
+        cost: 5
+        requires: []
+        effects:
+          bonus_saturation: 2.0
+      nourishment_2:
+        description: "+5 bonus food saturation"
+        cost: 12
+        requires:
+          - "nourishment_1"
+        effects:
+          bonus_saturation: 5.0
+      nourishment_3:
+        description: "+8 bonus food saturation"
+        cost: 20
+        requires:
+          - "nourishment_2"
+        effects:
+          bonus_saturation: 8.0
+      feast:
+        description: "+12 bonus food saturation"
+        cost: 30
+        requires:
+          - "nourishment_3"
+        effects:
+          bonus_saturation: 12.0
+
+  exploration:
+    display_name: "Exploration"
+    icon: "🧭"
+    nodes:
+      double_ore_1:
+        description: "10% chance for double ore drops while exploring"
+        cost: 5
+        requires: []
+        effects:
+          double_drop_chance: 0.1
+      double_ore_2:
+        description: "20% chance for double ore drops"
+        cost: 10
+        requires:
+          - "double_ore_1"
+        effects:
+          double_drop_chance: 0.2
+      fortuna:
+        description: "35% chance for double drops"
+        cost: 20
+        requires:
+          - "double_ore_2"
+        effects:
+          double_drop_chance: 0.35

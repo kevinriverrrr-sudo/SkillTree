@@ -1,0 +1,12 @@
+# SkillTree Russian Language File
+ui.main.description: "Добро пожаловать в Дерево Навыков! Выберите ветку для просмотра и разблокировки навыков."
+ui.branch.description: "Выберите узел навыка для просмотра деталей и разблокировки.\nВетка {branch}"
+branch.not_found: "Ветка не найдена: {branch}"
+branch.no_permission: "У вас нет разрешения на доступ к ветке {branch}."
+points.earned: "§a+{amount} очков навыков ({action})! Всего: {total}"
+node.unlocked: "§aРазблокирован навык: {node} в ветке {branch}!"
+effect.critical_hit: "§6Критический удар!"
+effect.double_drop: "§bДвойной дроп!"
+admin.given_points: "§aАдминистратор выдал вам {amount} очков навыков!"
+admin.taken_points: "§eАдминистратор забрал {amount} очков навыков."
+admin.set_points: "§aАдминистратор установил ваши очки навыков на {amount}."

@@ -1,0 +1,3 @@
+# Git ignore for SkillTree plugin
+/players/
+*.phar

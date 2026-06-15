@@ -1,0 +1,12 @@
+# SkillTree English Language File
+ui.main.description: "Welcome to the Skill Tree! Select a branch to view and unlock skills."
+ui.branch.description: "Select a skill node to view details and unlock it.\n{branch} Branch"
+branch.not_found: "Branch not found: {branch}"
+branch.no_permission: "You don't have permission to access the {branch} branch."
+points.earned: "§a+{amount} skill points ({action})! Total: {total}"
+node.unlocked: "§aUnlocked skill: {node} in {branch} branch!"
+effect.critical_hit: "§6Critical Hit!"
+effect.double_drop: "§bDouble Drop!"
+admin.given_points: "§aAn admin gave you {amount} skill points!"
+admin.taken_points: "§eAn admin took {amount} skill points from you."
+admin.set_points: "§aAn admin set your skill points to {amount}."
